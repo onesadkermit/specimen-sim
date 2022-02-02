@@ -17,7 +17,19 @@ def create_spiceman():
 def populate_environment():
     print()
 #==========блок классов===============
-    
+
+class Point:
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+class Figure:
+    def __init__(self):
+      pass
+    def setCenterPoint (self, x, y, z):
+        self.centerPoint = Point(x, y, z)
+
 #==========исполняемый блок===========
 get_ch = 0
 while not(get_ch == "4"):
