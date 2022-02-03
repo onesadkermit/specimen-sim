@@ -20,9 +20,19 @@ def populate_environment():
 
 class Point:
     def __init__(self, x, y, z):
-        self.x = x
-        self.y = y
-        self.z = z
+        self._x = x
+        self._y = y
+        self._z = z
+        
+    @property
+    def x(self): 
+        print('Getting x') 
+        return self._x    
+
+    @x.setter
+    def x(self, x): 
+        print('Setting x to ' + x) 
+        self._x = x
 
 class Figure:
     def __init__(self):
